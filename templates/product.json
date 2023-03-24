@@ -3,8 +3,14 @@
     "main": {
       "type": "main-product",
       "blocks": {
+        "03c70c1f-d384-4324-acc9-26b0b9833e06": {
+          "type": "rating",
+          "settings": {
+          }
+        },
         "vendor": {
           "type": "text",
+          "disabled": true,
           "settings": {
             "text": "{{ product.vendor }}",
             "text_style": "uppercase"
@@ -20,6 +26,12 @@
           "settings": {
           }
         },
+        "buy_buttons": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_dynamic_checkout": true
+          }
+        },
         "variant_picker": {
           "type": "variant_picker",
           "settings": {
@@ -28,13 +40,8 @@
         },
         "quantity_selector": {
           "type": "quantity_selector",
+          "disabled": true,
           "settings": {
-          }
-        },
-        "buy_buttons": {
-          "type": "buy_buttons",
-          "settings": {
-            "show_dynamic_checkout": true
           }
         },
         "description": {
@@ -50,21 +57,22 @@
         }
       },
       "block_order": [
+        "03c70c1f-d384-4324-acc9-26b0b9833e06",
         "vendor",
         "title",
         "price",
+        "buy_buttons",
         "variant_picker",
         "quantity_selector",
-        "buy_buttons",
         "description",
         "share"
       ],
       "settings": {
         "enable_sticky_info": true,
-        "media_size": "large",
+        "media_size": "small",
         "constrain_to_viewport": true,
         "media_fit": "contain",
-        "gallery_layout": "stacked",
+        "gallery_layout": "thumbnail_slider",
         "media_position": "left",
         "image_zoom": "lightbox",
         "mobile_thumbnails": "hide",
