@@ -1,0 +1,18 @@
+<script>
+    function hideImage() {
+        let photoArray = document.querySelector('.thumbnail-list__item')
+        let altText = document.querySelector('.product__media-item.is-active img')
+        let attribute = altText.getAttribute('alt')
+        document.querySelectorAll('[variant-pick]').forEach((el) => {
+            if (el.getAttribute('variant-pick') != (attribute)) {
+                el.style.display = 'none'
+            } else {
+                el.style.display = 'block'
+            }
+        })
+    }
+    hideImage()
+    document.addEventListener('change', () => {
+        hideImage()
+    })
+</script>
