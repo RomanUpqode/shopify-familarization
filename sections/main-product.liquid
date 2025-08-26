@@ -570,7 +570,13 @@
   </script>
 </section>
 
+
+{% assign colorFromMetafields = product.metafields.custom.ingredients  %}
 {{ product.metafields.custom.ingredients }}
+
+{% for color in colorFromMetafields %}
+  {{color }}
+{% endfor %}
 
 {% schema %}
 {
