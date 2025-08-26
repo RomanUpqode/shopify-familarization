@@ -572,10 +572,11 @@
 
 
 {% assign colorFromMetafields = product.metafields.custom.ingredients  %}
-{{ product.metafields.custom.ingredients }}
+{% comment %} {{ product.metafields.custom.ingredients }} {% endcomment %}
 
 {% for color in colorFromMetafields %}
-  {{color }}
+  1
+  {{ color }}
 {% endfor %}
 
 {% schema %}
